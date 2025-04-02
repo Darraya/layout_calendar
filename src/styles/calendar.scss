@@ -12,14 +12,9 @@ $animation-duration: 0.5s;
   display: flex;
   flex-wrap: wrap;
   gap: 1px;
-  width: calc(7 * $calendar-size + 6 * $calendar-gap);
+  width: calc(7 * $calendar-size + 6 * $calendar-gap) + 20px;
   padding: 10px;
   margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
 }
 
 // Окремий день у календарі
@@ -55,13 +50,13 @@ $animation-duration: 0.5s;
 
 // Модифікатор початкового дня тижня
 $start-days: (
-  mon: 1,
-  tue: 2,
-  wed: 3,
-  thu: 4,
-  fri: 5,
-  sat: 6,
-  sun: 0,
+  mon: 0,
+  tue: 1,
+  wed: 2,
+  thu: 3,
+  fri: 4,
+  sat: 5,
+  sun: 6,
 );
 
 @each $day, $margin in $start-days {
